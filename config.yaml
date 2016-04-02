@@ -1,0 +1,5 @@
+name: forstudyxing
+version: 3
+handle:
+- directoryindex: sammy.html Userloginsignin.html
+- expire:  if( path ~ "js" ) time 3600
