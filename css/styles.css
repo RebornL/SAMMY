@@ -1,0 +1,70 @@
+@charset "utf-8";
+html{
+	padding:0;
+	margin:0;
+}
+body{
+	padding:0;
+	margin:0;
+	min-width: 320px;
+}
+
+ul, ol, li, input {margin:0;padding:0;-webkit-text-size-adjust: none}
+a img {border:0;}
+img{max-width:100%;}
+ul, ol, li {list-style-type:none;vertical-align:0}
+p{
+	font-size:14px;
+}
+
+.slider{
+	display:none;
+	margin:0;
+	padding:0;
+	width:100%;
+	height:100%;
+}
+
+#top_picture{
+		width:100%;
+		margin:0px 0px 0px 0px;
+		padding:0px 0px 0px 0px;
+	}
+	
+#quick_reserve{
+	width:98%;
+	/* height:30%; */
+}
+	
+#expert_nutritionist,#old_nutritionist,#check_order,#personal_custom{
+		width:91%;
+		/* height:10%; */
+}
+
+#right-menu{
+	margin:0px;
+	padding:0px;
+	width: 231px;
+}
+
+.bottom_href:visited{
+	color:#fffff;
+}
+
+.bottom_href:active{
+	color:#fffff;
+}
+
+.ui-panel-page-content-open.ui-panel-page-content-position-right {
+    margin-left: 30em;
+}
+
+a.more_href:visited{
+	background-color:#00000;
+} 
+a.more_href:hover{
+	background-color:#00000;
+}
+a.more_href:active{
+	background-color:#00000;
+}    
