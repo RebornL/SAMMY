@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="HandheldFriendly" content="true">
+<meta name="MobileOptimized" content="320">
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<head>
+<link rel="stylesheet" href="../css/jquery.mobile-1.4.5.min.css">
+
+<!-- <script src="../js/jquery-2.1.4.min.js"></script> --><!--引入cdn资源减少对服务器的访问-->
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script> 
+<script type='text/javascript'>
+//CDN资源加载失败，加载本地服务器的资源
+if (typeof jQuery == 'undefined') { 
+	document.write(unescape("%3Cscript src='../js/jquery-2.1.4.min.js' type='text/javascript' %3E%3C/script%3E"));
+}
+</script>
+<script src="../js/jquery.mobile-1.4.5.min.js"></script>
+<script src="../js/person_manage.js"></script>
+<style type="text/css">
+	.li_css={
+		line-height:3px;
+		text-align:center;
+		border:solid 1px #f2f2f2;
+		background-color:#f9f9f9;
+		margin-top : 4px;
+	}
+	
+	.image_background{
+		background:url(../images/th.jpg)no-repeat;
+	}
+</style>
+
+</head>
+<body>
+	<div data-role="page" id="logout_status">
+		<div data-role="header" data-theme="a">
+			<a data-icon="back" data-iconpos="notext" data-rel="back"></a>
+			<h1 align="center">未登陆</h1>
+		</div>
+		
+		<a href="./Userloginsignin.html" class="ui-btn" data-ajax="false">点击登陆</a>
+	
+	</div>
+
+	<div data-role="page" id="login_status">
+		<div data-role="header" data-theme="a">
+			<a data-icon="back" data-iconpos="notext" data-rel="back"></a>
+            <h1>个人中心</h1>
+		</div>
+		
+		<div data-role="content" style="height:145px;border:0px;margin=0px;padding:0px;">
+			<div class="image_background">
+				<!--第一部分：头像-->
+				<div align="center" style="height:60px;border:3px;margin=3px;padding:3px">
+					<img  src="../images/head_picture1.png" style="width:48px; height:48px; border-radius:50px;"/>
+				</div>
+				<!--第零部分：昵称-->
+				<div id="show_nickname" align="center" style="border:0px;margin=0px;padding:0px;font-size:24px"></div>
+			</div>	
+			<!--第二部分：各种功能-->
+		</div>
+		<div style="margin:0px">
+			<ul data-role="listview">
+				<li value="lala1" class="li_css"><a href="./Order_manager.html" data-corners="false" data-ajax="false">我的订单</a></li>
+				<div data-role="navbar">
+					<ul>
+						<li><a id="order_status_0" href="Order_manager.php?order_status=0" data-icon="search" data-iconpos="notext" data-ajax="false">待受理</a></li>
+						<li><a id="order_status_1" href="Order_manager.php?order_status=1" data-icon="search" data-iconpos="notext" data-ajax="false">待服务</a></li>
+						<li><a id="order_status_2" href="Order_manager.php?order_status=2" data-icon="search" data-iconpos="notext" data-ajax="false">服务中</a></li>
+						<li><a id="order_status_3" href="Submitcomments.html" data-icon="search" data-iconpos="notext" data-ajax="false">待评价</a></li>
+						<li><a id="order_status_4" href="Order_manager.php?order_status=4" data-icon="search" data-iconpos="notext" data-ajax="false">已完成</a></li>
+
+					</ul>
+				</div>
+			</ul>
+			<br/>
+			
+			<ul data-role="listview">
+				<li value="lala2" class="li_css"><a href="./Submitcomments.html" data-corners="false" data-ajax="false">评价中心</a></li>
+			</ul>
+			<br/>
+			
+			<ul data-role="listview">
+				<li value="lala3" class="li_css"><a data-corners="false">功能3</a></li>
+			</ul>
+			<br/>
+			
+			<ul data-role="listview">
+				<li value="lala4" class="li_css"><a data-corners="false">功能4</a></li>
+			</ul>
+		</div>
+		
+		
+		<div data-role="footer" align="center" data-position="fixed">
+			<a id="logout" href="./Userlogout.html" class="ui-btn" data-ajax="false" style="width:350px">登出</a>
+		</div>
+	</div>
+
+	
+	
+	
+</body>
+</html>
+
+<!--
+个人中心：
+主要分为两个界面：
+ 1.登陆前的界面
+ 2.登陆后的界面
+做法：
+	1.做出基本的界面
+	2.通过js进行判断｛
+		 通过PHP获取$_session返回的值进行判断即可
+		｝
+		，填补，切换界面
+ -->

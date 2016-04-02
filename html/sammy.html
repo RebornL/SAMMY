@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<!--这是sammy的主界面-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="HandheldFriendly" content="true">
+<meta name="MobileOptimized" content="320">
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<head>
+<link rel="stylesheet" href="../css/jquery.mobile-1.4.5.min.css">
+<link rel="stylesheet" href="../css/jquery.mmenu.all.css" />
+<link rel="stylesheet" href="../css/styles.css">
+
+<!-- <script src="../js/jquery-2.1.4.min.js"></script> --><!--引入cdn资源减少对服务器的访问-->
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script> 
+<script type='text/javascript'>
+//CDN资源加载失败，加载本地服务器的资源
+if (typeof jQuery == 'undefined') { 
+	document.write(unescape("%3Cscript src='../js/jquery-2.1.4.min.js' type='text/javascript' %3E%3C/script%3E"));
+}
+</script>
+<script src="../js/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" src="../js/yxMobileSlider.js"></script><!--这个是滑动的插件-->
+<script type="text/javascript" src="../js/jquery.mmenu.min.all.js"></script><!--侧边栏的插件-->
+</head>
+<body>
+
+<div data-role="page" id="page1">
+  <div data-role="header" data-theme="a" data-fullscreen="true">
+    <h1>SAMMY营养师</h1>
+    <a href="#" data-role="button" class="ui-btn-right" data-icon="home" data-iconpos="notext">Home</a>
+  </div>
+
+  <div data-role="content" style="margin:0;padding:0;">
+    
+	<div class="slider">
+	  <ul>
+	    <li><a href="#" target="_blank"><img src="../images/1.jpg"></a></li>
+		<li><a href="#" target="_blank"><img src="../images/2.jpg"></a></li>
+		<li><a href="#" target="_blank"><img src="../images/3.jpg"></a></li>
+		<li><a href="#" target="_blank"><img src="../images/4.jpg"></a></li>
+		<li><a href="#" target="_blank"><img src="../images/5.jpg"></a></li>
+	  </ul>
+	</div>
+    
+    
+        
+        
+	<p><span>基础服务</span></p>
+
+    <fieldset class="ui-grid-a">
+		<div  class="ui-block-a" style="width:50%;height:30%">
+			<div>
+            <a href="./quick_reserve.html?t=1" rel="external" ><!-- 点击之后进入到快速预约的界面 -->
+				<img id="quick_reserve" class="img " src="../images/quick_reservation.jpg" />
+			</a>
+			</div>
+
+		</div>	
+		<div class="ui-block-b" style="width:50%;height:30%">
+			<div>
+				<a href="./expert_dietitian.html" rel="external"><!-- 点击之后进入到专家营养师的界面 -->
+					<img id="expert_nutritionist" src="../images/expert_nutritionist.jpg"/>
+				</a>
+			</div>
+			<div>
+				<a href="./senior_dietitian.html" rel="external"><!-- 点击之后进入到资深营养师的界面 -->
+					<img id="old_nutritionist" src="../images/old_nutritionist.jpg"/>
+				</a>
+			</div>
+      
+			<div>
+                <a href="./private_custom.html?t=1" rel="external" ><!-- 点击之后进入到私人定制的界面-->
+                    <img id="personal_custom" src="../images/personal_custom.jpg"/>
+                </a>
+            </div>
+  		</div>
+	</fieldset>
+<div>
+        <p><span>
+        
+        
+        </span></p>
+</div>
+
+	<p><span>热门服务</span></p>
+	<p>正在上线，敬请期待!</p><br/> 
+	
+  </div>
+  
+
+  <div data-role="footer" data-position="fixed"  data-theme="a">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="./Order_manager.html" data-icon="search" data-iconpos="notext" data-ajax="false">订单管理</a></li>
+        <li><a id="person" href="./personal_center.html" data-icon="info" data-iconpos="notext" data-ajax="false">个人中心</a></li>
+        <li><a class="more_href" href="#right_menu" data-icon="check" data-iconpos="notext">更多</a></li>
+         <!--这里“更多”可以更改为侧边栏的模式-->
+	  </ul>
+    </div>
+  </div>
+
+</div>
+
+<!--“更多”的侧边栏-->
+<nav id="right_menu">
+	<ul>
+		<li><a href="#"><i class="fa fa-home"></i>Home</a></li>
+		<li><a href="#about">关于我们</a>
+			<ul>
+				<li><a href="#">History</a></li>
+				<li><a href="#">团队成员</a>
+					<ul>
+						<li><a href="#">XXX</a></li>
+						<li><a href="#">XXX</a></li>
+						<li><a href="#">XXX</a></li>
+					</ul>
+				</li>
+				<li><a href="#">联系地址:广东省广州市天河区XXX路XXX号XXXXXX</a>
+					
+				</li>
+			</ul>
+		</li>
+		<li><a href="#">联系电话:1888888888</a>
+			
+		</li>
+	</ul>
+</nav>
+
+</body>
+<script type="text/javascript">
+	$(document).on("pageinit","#page1",function(){
+		$(".slider").yxMobileSlider({width:640,height:320,during:3000});
+		$("#right_menu").mmenu({
+			extensions: ["theme-dark","multiline","pageshadow"],
+			offCanvas: {
+				position: "right"
+			},
+			navbar : {
+				title : '更多'
+			},
+
+		});
+		
+	});
+</script>
+
+</html>

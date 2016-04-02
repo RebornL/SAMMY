@@ -1,0 +1,83 @@
+<form method="get" id = "usersubmitsammy" >
+
+	
+        <div data-role="fieldcontain">
+            <label for="order_ID"><span>当前订单的ID</span></label>
+            <input type="text" name="order_ID" id="order_ID" readonly/>
+        </div>
+        
+		<div style="display: none;" data-role="fieldcontain">
+			<label for="user_id"><span>用户ID</span></label>
+			<input type="text" name="user_id" id="user_id" value="0">
+		</div>
+		
+		
+		<div data-role="fieldcontain">
+			<label for="ToS"><span>你所选的服务类型</span></label>
+				<select id="ToS" name="ToS" required class="reqd" readonly>
+					<option value="0">快速预约</option>
+					<option value="1">私人定制</option>
+				</select>
+			
+		</div>
+		<div id="ToC_div" data-role="fieldcontain">
+			<label for="ToC"><span>咨询类型</span></label>
+				<select id ="ToC" name="ToC">
+					<option value="-1">私人定制（无此项）</option>
+					<option value="0">健康调理</option>
+					<option value="1">营养咨询</option>
+					<option value="2">母婴健康</option>
+					<option value="3">健康计划</option>
+					<option value="4">饮食计划</option>
+				</select>
+		</div>
+		
+		<div data-role="fieldcontain">
+			<label for="Dietitian_ID"><span>选择您的营养师</span></label>
+			<select id ="Dietitian_ID" name="Dietitian_ID">
+				<option value="1">营养师1</option>
+				<option value="2">营养师2</option>
+				<option value="3">营养师3</option>
+				<option value="4">营养师4</option>
+			</select>
+		</div>
+		
+		<div data-role="fieldcontain">
+			<label for="user_name"><span>姓名</span></label>
+			<input type="text" name="user_name" id="user_name" placeholder="姓名"/>
+		</div>		
+			
+		<div data-role="fieldcontain">
+        		<label for="sex"><span>性别</span></label>
+				<select name="sex" id="sex">
+				<option value="0">男</option>
+				<option value="1">女</option>
+			</select>	
+			
+		</div>		
+			
+		<div data-role="fieldcontain">
+        	<label for="age"><span>年龄</span></label>
+			<input type="number" name="age" id="age" placeholder="年龄"/>
+		</div>		
+			
+		<div data-role="fieldcontain">
+        	<label for="contract"><span>手机号码</span></label>
+			<input type="number" name="contract" id="contract" placeholder="手机号码" />
+		</div>
+		
+		<div data-role="fieldcontain">
+			<label for="address"><span>咨询地址</span></label>
+			<input type="text" name="address" id="address" placeholder="您的地址"/>
+		</div>
+		
+		<div id="description_div" data-role="fieldcontain">
+			<label for="description" >描述一下您的需求:</label>
+			<textarea cols="40" rows="8" name="description" id="description" placeholder="描述一下您的需求"></textarea>
+		</div>
+		
+		<div data-role="fieldcontain">
+			<label for="service_time"><span>期望服务时间</span></label>
+			<input type="date" name="service_time" id="service_time">
+		</div>
+</form>

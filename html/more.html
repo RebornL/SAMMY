@@ -1,0 +1,58 @@
+<!--这是更多的界面-->
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<head>
+<link rel="stylesheet" href="../css/jquery.mobile-1.4.5.min.css">
+
+<!-- <script src="../js/jquery-2.1.4.min.js"></script> --><!--引入cdn资源减少对服务器的访问-->
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script> 
+<script type='text/javascript'>
+//CDN资源加载失败，加载本地服务器的资源
+if (typeof jQuery == 'undefined') { 
+	document.write(unescape("%3Cscript src='../js/jquery-2.1.4.min.js' type='text/javascript' %3E%3C/script%3E"));
+}
+</script>
+<script src="../js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<div data-role="page" id="page_more" data-theme="a">
+  <div data-role="header" data-fullscreen="true"  data-theme="a">
+	<a href="#" data-role="button" class="ui-btn-left" data-icon="back" data-rel="back">BACK</a>
+	<h1>更多</h1>
+	<a href="./sammy.html" data-role="button" class="ui-btn-right" data-icon="home" data-rel="external">Home</a>
+  </div>
+
+  <div data-role="content">
+	<a href="#page_cancel" data-role="button" data-icon="info" data-transition="slide">取消订单</a>
+	<a href="#page_aboutus" data-role="button" data-icon="info" data-rel="dialog">关于我们</a>
+  </div>
+</div>
+
+<div data-role="page" id="page_cancel">
+	<div data-role="header" data-theme="a">
+		<h1>取消订单</h1>
+	</div>
+	
+	<div data-role="content">
+		<label for="order_number">订单号:</label>
+		<input type="text" name="order_number" id="order_number" placeholder="订单号">
+		<a href="#" data-role="button" >确定</a>
+	</div>
+</div>
+    
+<div data-role="page" id="page_aboutus">
+	<div data-role="header" data-theme="a">
+		<h1>关于我们</h1>
+	</div>
+
+	<div data-role="content">
+		<p>我们是一群有梦想，有激情的青年！！！</p>
+	 <a href="#" data-role="button" class="ui-btn-left" data-icon="back" data-rel="back">BACK</a>
+  </div>
+
+	
+</div>   
+</body>
+</html>
